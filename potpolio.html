@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            background: black;
+            overflow-x: hidden;
+            padding-left: 35rem;
+        }
+        *{
+            font-family: 'Nunito',sans-serif;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        header{
+            position: fixed;
+            background-color: gray;
+            height: 100%;
+            width: 350px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            left: 0px;
+            top: 0px;
+        }
+        header .user img{
+            height: 110px;
+            width: 130px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            margin-top: 140px;
+            object-fit: cover;
+            border:7px solid darkgoldenrod;
+        }
+        header .user .name{
+            color: black;
+            font-size: 30px;
+        }
+        header .user .post{
+            color: black;
+            font-size: 20px;
+        }
+        header .navbar ul{
+            list-style-type: none;
+            padding: 10px 20px;
+        }
+        header .navbar ul li a{
+            display: block;
+            margin: 20px;
+            padding: 10px;
+            background-color: chocolate;
+            color: cornsilk;
+            font-size: 15px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        header .navbar ul li a:hover{
+            background-color: darkgreen;
+        }
+        .btn:hover{
+            background:yellow;
+        }
+        .btn{
+            padding: 6px 3px;
+            background:chocolate;
+            color: cornsilk;
+            cursor: pointer;
+            margin-top: 5px;
+            font-size: 15px;
+            border-radius: 14px;
+            text-decoration: none;
+        }
+        }
+        .home{
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+            padding: 0 15rem;
+            color: white;
+        }
+        .home h3{
+            font-size: 23px;
+            color: whitesmoke
+        }
+        .home h1{
+            font-size: 2rem;
+            color:whitesmoke;
+        }
+        section span{
+            color: yellow;
+        }
+        section{
+            margin-top: 230px;
+        }
+        .home p{
+            color: whitesmoke;
+            font-size: 17px;
+            padding: 6px 0;
+            padding: 1rem;
+            border-bottom: .1rem solid green;
+            color: white;
+        }
+        .heading{
+            text-align: center;
+            margin: 0 .5rem;
+        }
+        section h1{
+            color: white;
+        }
+        .heading span{
+            color: yellow;
+        }
+        .info h3{
+            color: white;
+        }
+        .about .row{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 1rem 0;
+        }
+        .about .row .info{
+            flex:1 1 48rem;
+            padding: 2rem 1rem;
+            padding-left: 0;
+        }
+        .about .row .counter{
+            flex:1 1 48rem;
+            padding: 2rem 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .about .row .info h3{
+            font-size: 18px;
+            color: yellow;
+            pad: 1rem 0;
+            font-weight: normal;
+        }
+        .about .row .info h3 span{
+            color: white;
+            padding: 0px .5rem;
+        }
+        .about .row .counter .box{
+            width: 8rem;
+            background: grey;
+            text-align: center;
+            padding: 1rem;
+            margin: 1rem;
+        }
+        .about .row .counter .box h3{
+            font-size: 15px;
+            color: white;
+        }
+        .education .box-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 1rem 0;
+            padding-left: 3rem;
+        }
+        .education .box-container .box{
+            width: 27rem;
+            margin: 4rem 1rem;
+            padding-left: 4rem;
+            border-left: .2rem solid white;
+            position: relative;
+        }
+        .education .box-container .box span{
+            font-size: 20px;
+            background: black;
+            color: white;
+            border-radius: 4rem;
+        }
+        .education .box-container .box h3{
+            font-size: 18px;
+            color: white;
+            padding-top: 7px;
+        }
+        .education .box-container .box p{
+            font-size: 1rem;
+            color: white;
+            padding-top: 1rem;
+        }
+       .education .box-container .box i{
+            position: absolute;
+            bottom: 124px;
+            right: 245px;
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            line-height: 20px;
+            text-align: center;
+            font-size: 7px;
+            color: white;
+            background:yellow;
+            margin-right: 170px;
+        }
+        .portpolio .box-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap-reverse;
+            padding: 2rem 0;
+        }
+        .portpolio .box-container .box{
+            height: 20rem;
+            width: 26rem;
+            border-radius: 1rem;
+            margin: 1rem;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .portpolio .box-container .box img{
+            height: 250px;
+            width: 250px;
+            object-fit: cover;
+        }
+        .portpolio .box-container .box:hover img{
+            transform: scale(1.0);
+        }
+        .contact .row{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .contact .row .content{
+            flex: 1 1 30rem;
+            padding: 4rem;
+            padding-bottom: 0px;
+        }
+        .contact .row form{
+            flex: 1 1 45rem;
+            padding: 1rem;
+            margin: 2rem;
+            margin-bottom: 4rem;
+        }
+        .contact .row form .box{
+            padding: 20px;
+            margin: .5rem 0;
+            background:white;
+            color:yellow;
+            text-transform: none;
+            font-size: 1rem;
+        }
+        .contact .row form .message{
+            height: 15rem;
+            resize: none;
+        }
+        .contact .row .content .title{
+            text-transform: uppercase;
+            color: blanchedalmond;
+            font-size: 3rem;
+            padding-bottom: 2rem;
+        }
+        .contact .row .content .info h3{
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            color: white;
+            padding: 1rem 0;
+            font-weight: normal;
+        }
+        .contact .row .content .info h3 i{
+            padding-right: 1rem;
+            color: yellow;
+        }
+        .contact .row form .box::placeholder{
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body bgcolor="white">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <header>
+        <div class="user">
+            <img src="sona.jpg" alt="">
+            <h3 class="name">Soni Kumari</h3>
+            <p class="post">Front End developer</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#portpolio">Portpolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <h3>HI THERE!</h3>
+        <h1>I'M <span>Soni Kumari</span></h1>
+        <p>"A CARRIER THAT IS CHALLENGING AND INTERESTING. A JOB THAT GIVES ME
+            OPPORTUNITIES TO WORK AT THE LEADING EDGE OF TECHNOLOGY TO LEARN
+            TO INNOVATE TO LEAD OTHERS AND FEEL THE SATISFACTION OF SUCCESS AND
+            POTENTIAL TO MEET THE CHALLENGE OF GROWING DEMANDS WHERE I CAN
+            PROPERLY UTILIZE MY SKILLS AND KNOWLEDGE AS MUCH AS POSSIBLE"</p>
+        <a href="#about"><button class="btn">About Me <i class="fas fa-user"></i></button></a> 
+    </section>
+    <section class="about" id="about">
+        <h1 class="heading"><span>About</span> Me</h1><hr>
+        <div class="row">
+        <div class="info">
+            <h3><span>Name:</span>    Soni Kumari</h3></br>
+            <h3><span>Age:</span>    21</h3></br>
+            <h3><span>Qualification:</span>    Bachlore of Engineering</h3></br>
+            <h3><span>Post:</span>    Front end Developer</h3></br>
+            <h3><span>Language:</span>    English and Hindi</h3></br>
+            <a href="Resume.pdf" download=""><button class="btn">Download CV <i class="fas fa-download"></i></button>
+            </a>
+        </div>
+        <div class="counter">
+            <div class="box">
+                <span>Fresher</span>
+                <h3>year of experience</h3>
+            </div>
+            <div class="box">
+                <span>2</span>
+                <h3>Project completed</h3>
+            </div>
+            <div class="box">
+                <span>Can do</span>
+                <h3>happy client</h3>
+            </div>
+            <div class="box">
+                <span>2+</span>
+                <h3>Awards won</h3>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--education section-->
+    <section class="education" id="education">
+        <h1 class="heading"> My <span>Education</span></h1><hr>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2015</span>
+                <h3>10TH</h3><hr>
+                <p>school :- Saraswati Vidya Mandir, Munger Bihar(Puranigang)<br>
+                    CGPA :- 6.4<br>
+                    Passing year :- 2015</p>
+
+            </div>
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2015</span>
+                <h3>Diploma</h3><hr>
+                <p>College :- Neelkanth group of Institution Meerut,Uttar pradesh<br>
+                    Marks :- 74.45<br>
+                    Passing Year :- 2018</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2018</span>
+                <h3>Bachlore of Engineering</h3><hr>
+                <p>College :- Sant longowal Institution of Technology sangrur,Punjab<br>
+                    Passing Year :- 2021<br>
+                    CGPA :- 7.35</p>
+            </div>
+        </div>
+    </section>
+    <section class="portpolio" id="portpolio">
+        <h1 class="heading">My<span>Portpolio</span></h1><hr>
+        <div class="box-container">
+        <div class="box">
+            <img src="imgg1.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="imgg2.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="imgg3.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="imgg4.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="imgg5.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="imgg6.jpg" alt="">
+        </div>
+        </div>
+    </section>
+    <!--contact section-->
+    <section class="contact" id="contact">
+        <h2 class="heading"><span>My Contact</span></h2><hr>
+        <div class="row">
+            <div class="content">
+                <h4 class="title">Contact info</h4>
+                <div class="info">
+                    <h3><i class="fas fa-envalope"></i>sonikumari8755@gmail.com</h3>
+                    <h3><i class="fas fa-phone"></i>+91-7292935105</h3>
+                    <h3><i class="fas fa-phone"></i>+91-9041324064</h3>
+                    <h3><i class="fas fa-map-marker-alt"></i>Punjab, India - 12345.</h3>
+                </div>
+            </div>
+            <form action="">
+                <input type="text" placeholder="Name" class="box"><br>
+                <input type="email" placeholder="Email" class="box"><br>
+                <input type="text" placeholder="Project" class="box"><br>
+                <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="Message"></textarea><br>
+                <button type="submit" class="btn">Send <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
